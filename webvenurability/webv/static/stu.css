@@ -1,0 +1,54 @@
+
+
+*{
+    margin: 0;
+    padding:0;
+   
+    
+}
+.container{
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 200px;
+    
+}
+.container .container_title{
+    text-transform: uppercase;
+    font-size: 60px;
+    padding: 25px;
+    margin-bottom: 50px;
+}
+
+
+.container form .input_box .details{
+    text-transform: uppercase;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    margin-right: 120px;
+    margin-bottom: 5px;
+}
+
+.container form .input_box input{
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.container form .input_box .button input{
+    width: 80px;
+    text-transform: uppercase;
+    color: white;
+    border-style: none;
+    background-color: blue;
+    padding: 10px;
+    text-align: center;
+}

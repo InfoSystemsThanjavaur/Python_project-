@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/addc.css">
+    <title>SELLER REGISTER</title>
+</head>
+<body>
+   {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>ADD COMAPANY</b></h1>
+        </div>
+        <form action="addc.html" method="post">
+            {% csrf_token %}
+        <div class="input_box">
+            <span class="details">COMAPANY NAME </span>
+            <input type="text" name="r1" placeholder="ENTER NAME">
+        </div><BR>
+        <div class="input_box">
+            <span class="details">COMPANY TYPE</span>
+                <input type="text" name="r2" placeholder="MOBILE">
+        </div><BR>
+           
+        <div class="input_box">
+           
+            <span class="details">JOBROLE</span>
+            <input type="text" name="r3" placeholder="EMAIL">
+        </div><BR>
+
+        <div class="input_box">
+            <span class="details">ADDRESS</span>
+            <textarea name="r4"></textarea>
+        </div>
+            <div class="input_box">
+                <span class="details">PASSWORD</span>
+                    <input type="text" name="r5" placeholder="PASSWORD">
+            </div><BR>
+
+         <div class="input_box">
+            <span class="details">DATE</span>
+            <input type="date" name="r6" placeholder="PASSWORD">
+        </div><BR>
+
+            <div class="input_box">
+                <input type="submit" name="s1">
+                {{result}}
+            </div><br>
+            
+        </form>
+        
+    </div>
+   {% endblock content %}
+</body>
+</html>

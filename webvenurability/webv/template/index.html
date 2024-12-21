@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    {% block content %}
+<div class="contain">
+   <link rel="stylesheet" href="static/i.css"   
+</div>
+    <center>
+        <h1>WEB VELNURABILITY</h1>
+    </center>
+<div class="container">
+
+    
+    
+       <button class="one"><strong>HOME</strong></button>
+       <a href="user.html"><button class="two"><b>STUDENT</b></button></a>
+       <a href="management.html"><button class="three"><b>MANAGEMENT</b></button></a>
+       <a href="company.html" ><button class="four"><B>COMPANY</B></button></a>
+       <a href="test.html" ><button class="five"><B>TEST</B></button></a>
+       <a href="reg.html" ><button class="six"><B>REGISTER</B></button></a>
+    
+
+   
+</div>
+{% if result == 'yess' %}
+    <script>
+    alert('SOME TRY TO HACK')
+    </script>
+{% endif %}
+<p>This project is beneficial for college students, various companies visiting the campus for recruitment and even the college placement officer. College Campus Recruitment system that consists of a student login, company login and an admin login. The software system allows the students to create their profiles and upload all their details including their marks onto the system. The admin can check each student details and can remove faulty accounts. The system also consists of a company login where various companies visiting the college can view a list of students in that college and also their respective resumes. The software system allows students to view a list of companies who have posted for vacancy. The admin has overall rights over the system and can moderate and delete any details not pertaining to college placement rules. The system handles student as well as company data and efficiently displays all this data to respective sides.</p>
+   
+    {% endblock content %}
+</body>
+</html>

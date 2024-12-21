@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/sndapp.css">
+    <title>SEND APPLICATION</title>
+</head>
+<body>
+   {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>SEND APPLICATION</b></h1>
+        </div>
+        <form action="sndapp.html" method="post">
+            {% csrf_token %}
+        <div class="input_box">
+            <span class="details">STUDENT NAME</span>
+            <input type="text" name="r1" placeholder="ENTER NAME">
+        </div><BR>
+        <div class="input_box">
+            <span class="details">MOBILE</span>
+                <input type="text" name="r2" placeholder="MOBILE">
+        </div><BR>
+           
+        <div class="input_box">
+           
+            <span class="details">EMAIL</span>
+            <input type="text" name="r3" placeholder="EMAIL">
+        </div><BR>
+
+        <div class="input_box">
+                <span class="details">DATE</span>
+                <input type="date" name="r4" placeholder="PASSWORD">
+            </div><BR>
+            
+
+                <div class="input_box">
+                   APPLICATION
+                    <textarea name="r5"></textarea>
+                </div>
+
+            <div class="input_box">
+                <input type="submit" name="s1">
+                {{result}}
+            </div><br>
+            
+        </form>
+    </div>
+   {% endblock content %}
+</body>
+</html>
