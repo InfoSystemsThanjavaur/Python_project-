@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/reg.css">
+    <title>VIEW SATELLITE</title>
+</head>
+<body>
+   {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>BEHAVIOUR</b></h1>
+        </div>
+    <form action="behvior.html" method="post">
+            {% csrf_token %}
+        <div class="input_box">
+            <span class="details">CUSTOMER NAME</span>
+            <input type="text" name="r1" placeholder="SATELLITE NAME">
+        </div><BR>
+        <div class="input_box">
+            <span class="details">CUSTOMER ID</span>
+                <input type="text" name="r2" placeholder="CUSTOMER ID">
+        </div><BR>
+           
+        <div class="input_box">
+           
+            <span class="details">PURCHASED SATELLITE</span>
+            <input type="text" name="r3" placeholder="QUANTITY">
+        </div><BR>
+
+         
+                <div class="input_box">
+                    FEEDBACK
+                     <textarea name="r4"></textarea>
+                </div>
+
+            <div class="input_box">
+                <input type="submit" name="s1">
+                {{result}}
+            </div><br>
+            
+    </form>
+    </div>
+   {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/reg.css">
+    <title>CONNECT SERVER</title>
+</head>
+<body>
+   {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>CONNECT SERVER</b></h1>
+        </div>
+    <form action="cntser.html" method="post">
+            {% csrf_token %}
+        <div class="input_box">
+            <span class="details">SERVER NAME</span>
+            <input type="text" name="r1" placeholder="SERVER NAME">
+        </div><BR>
+        <div class="input_box">
+            <span class="details">SERVER PASSWORD</span>
+                <input type="text" name="r2" placeholder="SERVER PASSWORD">
+        </div><BR>
+           
+        <div class="input_box">
+           
+            <span class="details">TEXT</span>
+            <input type="text" name="r3" placeholder="TEXT">
+        </div><BR>
+                    
+            <div class="input_box">
+                <span class="details">RETYPE TEXT</span>
+                <input type="text" name="r4" placeholder="RETYPE TEXT">
+                </div><BR>
+
+            <div class="input_box">
+                <input type="submit" name="s1">
+                {{result}}
+            </div><br>
+            
+    </form>
+    </div>
+   {% endblock content %}
+</body>
+</html>

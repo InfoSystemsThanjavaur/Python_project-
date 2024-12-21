@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/vpur.css">
+    <title>Document</title>
+</head>
+<body>
+{% block content %}
+<div class="container"> 
+    <h1>PURCHASED SATELLITE</h1>
+    <form action="vpurchased.html" method="post">
+        {% csrf_token %}
+    <label><b>SATELLITE NAME</b></label>
+    <input type="text" name="rec1"><br>
+    <label><b>SATELLITE MODEL</b></label>
+    <input type="text" name="rec2"><br>
+    <input type="submit" name="c3" value="search">
+</form>
+<table border="2" align="center" bgcolor="cyan">
+    <tr><th colspan="10">DETAILS</th></tr>
+    <tr><th>SATELLITE NAME</th><th>SATELLITE METHOD</th><th>QUANTITY</th><TH>ADDRESS</TH><TH>PHONE NUMBER</TH></tr>
+    {% for i in result %}
+    <tr>
+        {% for j in i %}
+        <td>{{j}}</td>
+   
+        {% endfor %}
+    </tr>
+        {% endfor %}
+     </table>
+</div>
+{% endblock content %}
+</body>
+</html>

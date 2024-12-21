@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/ordsat.css">
+    <title>Document</title>
+</head>
+<body>
+{% block content %}
+<div class="container">
+    <h1>ORDERED SATELLITE</h1>
+    <form action="ordsat.html" method="post">
+        {% csrf_token %}
+    <label><b>DETAILS</b></label>
+   
+    <input type="submit" name="c3" value="search">
+</form>
+<table border="2" align="center" bgcolor="cyan">
+    <tr><th colspan="7">DATA</th></tr>
+    <tr><TH>SNO</TH><th>SATELLITE NAME</th><th>SATELLITE MODEL</th><TH>QUANTITY</TH><TH>ADDRESS</TH><TH>PHNO</TH></tr>
+    {% for i in result %}
+    <tr>
+        {% for j in i %}
+        <td>{{j}}</td>
+   
+        {% endfor %}
+    </tr>
+        {% endfor %}
+     </table>
+</div>
+{% endblock content %}
+</body>
+</html>

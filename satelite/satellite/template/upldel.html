@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/reg.css">
+    <title>UPLOAD DELIVERY</title>
+</head>
+<body>
+   {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>UPDATE DELEVERY</b></h1>
+        </div>
+    <form action="upldel.html" method="post">
+            {% csrf_token %}
+        <div class="input_box">
+            <span class="details">SATELLITE NAME</span>
+            <input type="text" name="r1" placeholder="SATELLITE NAME">
+        </div><BR>
+        <div class="input_box">
+            <span class="details">SATELLITE MODEL</span>
+                <input type="text" name="r2" placeholder="SATELLITE MODEL">
+        </div><BR>
+           
+            <div class="input_box">
+                   TO ADDRESS
+                     <textarea name="r3"></textarea>
+                 </div>
+
+                 <div class="input_box">
+                    <span class="details">DELEVERY TIME</span>
+                    <input type="time" name="r4" placeholder="DELEVERY TIME">
+                </div><BR>
+                
+                    <div class="input_box">
+                        <span class="details">DELEVERY DATE</span>
+                        <input type="date" name="r5" placeholder="DELEVERY DATE">
+                    </div><BR>
+
+            <div class="input_box">
+                <input type="submit" name="s1">
+                {{result}}
+            </div><br>
+            
+    </form>
+    </div>
+   {% endblock content %}
+</body>
+</html>

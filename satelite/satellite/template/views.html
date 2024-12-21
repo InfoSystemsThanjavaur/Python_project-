@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/reg.css">
+    <title>VIEW SATELLITE</title>
+</head>
+<body>
+   {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>SATELLITE</b></h1>
+        </div>
+    <form action="views.html" method="post">
+            {% csrf_token %}
+        <div class="input_box">
+            <span class="details">SATELLITE NAME</span>
+            <input type="text" name="r1" placeholder="SATELLITE NAME">
+        </div><BR>
+        <div class="input_box">
+            <span class="details">SATELLITE MODEL</span>
+                <input type="text" name="r2" placeholder="SATELLITE MODEL">
+        </div><BR>
+           
+        <div class="input_box">
+           
+            <span class="details">QUANTITY</span>
+            <input type="text" name="r3" placeholder="QUANTITY">
+        </div><BR>
+
+            <div class="input_box">
+                <span class="details">QUALITY</span>
+                    <input type="text" name="r4" placeholder="QUALITY">
+            </div><BR>
+                <div class="input_box">
+                    PRICE
+                     <textarea name="r5"></textarea>
+                 </div>
+                <div class="input_box">
+                    PRODUCT DESCRIPTION
+                     <textarea name="r6"></textarea>
+                 </div>
+
+            <div class="input_box">
+                <input type="submit" name="s1">
+                {{result}}
+            </div><br>
+            
+    </form>
+    </div>
+   {% endblock content %}
+</body>
+</html>

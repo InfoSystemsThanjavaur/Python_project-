@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/reg.css">
+    <title>CUSTOMER</title>
+</head>
+<body>
+   {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>CUSTOMER
+            </b></h1>
+        </div>
+        <form action="customer.html" method="post">
+            {% csrf_token %}
+        <div class="input_box">
+            <span class="details">CUSTOMER NAME</span>
+            <input type="text" name="r1" placeholder="CUSTOMER NAME">
+        </div><BR>
+        <div class="input_box">
+            <span class="details">CUSTOMER ID</span>
+                <input type="text" name="r2" placeholder="CUSTOMER ID">
+        </div><BR>
+           
+            <div class="input_box">
+               LOCATION
+                 <textarea name="r3"></textarea>
+            </div>
+
+            <div class="input_box">
+                <span class="details">PHONE NO</span>
+                    <input type="text" name="r4" placeholder="PH NO">
+            </div><BR>
+                <div class="input_box">
+                    <span class="details">EMAIL</span>
+                        <input type="text" name="r5" placeholder="EMAIL">
+                </div><BR>
+            <div class="one">
+                    ALREADY PURCHASED<input type="radio" name="r6" value="yes">yes
+                    <input type="radio" name="r6" value="no">no 
+            </div><BR><br>
+
+
+            <div class="input_box">
+                <input type="submit" name="s1">
+                {{result}}
+            </div><br>
+            
+        </form>
+    </div>
+   {% endblock content %}
+</body>
+</html>

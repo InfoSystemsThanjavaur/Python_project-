@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/reg.css">
+    <title>PRODUCTS</title>
+</head>
+<body>
+   {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>PRODUCTS</b></h1>
+        </div>
+    <form action="products.html" method="post">
+            {% csrf_token %}
+        <div class="input_box">
+            <span class="details">SATELLITE NAME</span>
+            <input type="text" name="r1" placeholder="SATELLITE NAME">
+        </div><BR>
+        <div class="input_box">
+            <span class="details">SATELLITE MODEL</span>
+                <input type="text" name="r2" placeholder="SATELLITE MODEL">
+        </div><BR>
+           
+        <div class="input_box">
+           
+            <span class="details">PURPOSE</span>
+            <input type="text" name="r3" placeholder="PURPOSE">
+        </div><BR>
+                    
+            <div class="input_box">
+                <span class="details">SENSOR</span>
+                <input type="text" name="r4" placeholder="SENSOR">
+                </div><BR>
+                    <div class="input_box">
+                        <span class="details">SPEED</span>
+                        <input type="text" name="r5" placeholder="SPEED">
+                        </div><BR>
+
+                    <div class="input_box">
+                        <span class="details">PROCESSOR</span>
+                        <input type="text" name="r6" placeholder="PROCESSOR">
+                        </div><BR>
+            <div class="input_box">
+                <input type="submit" name="s1">
+                {{result}}
+            </div><br>
+            
+    </form>
+    </div>
+   {% endblock content %}
+</body>
+</html>
