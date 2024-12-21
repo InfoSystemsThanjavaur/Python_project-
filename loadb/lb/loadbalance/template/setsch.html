@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/regi.css">
+    <title>REGISTER</title>
+</head>
+<body>
+   {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>SET SCHEDULING</b></h1>
+        </div>
+        <form action="setsch.html" method="post">
+            {% csrf_token %}
+        <div class="input_box">
+            <span class="details">USERID</span>
+            <input type="text" name="r1" placeholder="USERID">
+        </div><BR>
+        <div class="input_box">
+            <span class="details">NAME</span>
+                <input type="text" name="r2" placeholder="NAME">
+        </div><BR>
+       
+        <div class="input_box">
+                <span class="details">SCHEDULE</span>
+                <input type="datetime-local" name="r3" placeholder="SCHEDULE">
+        </div><BR>
+
+            <div class="input_box">
+                <input type="submit" name="s1">
+                {{result}}
+            </div><br>
+            
+        </form>
+    </div>
+   {% endblock content %}
+</body>
+</html>

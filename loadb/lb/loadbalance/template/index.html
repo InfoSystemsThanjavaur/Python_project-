@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    {% block content %}
+<div class="contain">
+   <link rel="stylesheet" href="static/i.css"   
+</div>
+    <center>
+        <h1>LOAD BALANCING</h1>
+    </center>
+<div class="container">
+
+    
+    
+       <button class="one"><strong>HOME</strong></button>
+       <a href="user.html"><button class="two"><b>USER</b></button></a>
+       <a href="clogin.html"><button class="three"><b>CLOUD SERVER</b></button></a>
+       <a href="dynlogin.html" ><button class="four"><B>DYNAMIC SCHEDULING</B></button></a>
+       <a href="loadbalancer.html"><button class="five"><B>LOADBALANCER</B></button></a>
+       <a href="reg.html"><button class="five"><B>REGISTER</B></button></a>
+    
+
+   
+</div>
+
+<p>Load-balanced flow scheduling for big data centers in clouds, in which a large amount of data needs to be transferred frequently among thousands of interconnected servers, is a key and challenging issue. The Open Flow is a promising solution to balance data flows in a data center network through its programmatic traffic controller. Existing Open Flow based scheduling schemes, however, statically set up routes only at the initialization stage of data transmissions, which suffers from dynamical flow distribution and changing network states in data centers and often results in poor system performance. In this paper, we propose a novel dynamical load-balanced scheduling (DLBS) approach for maximizing the network throughput while balancing workload dynamically. We firstly formulate the DLBS problem, and then develop a set of efficient heuristic scheduling algorithms for the two typical Open Flow network models, which balance data flows time slot by time slot. Experimental results demonstrate that our DLBS approach significantly outperforms other representative load-balanced scheduling algorithms Round Robin and LOBUS; and the higher imbalance degree data flows in data centers exhibit, the more improvement our DLBS approach will bring to the data centers.</p> 
+   
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/cmt.css">
+    <title>COMMENTS</title>
+</head>
+<body>
+   {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>ENTER YOUR COMMENTS</b></h1>
+        </div>
+        <form action="comment.html" method="post">
+            {% csrf_token %}
+        <div class="input_box">
+            <span class="details">ENTER NAME</span>
+            <input type="text" name="r1" placeholder="ENTER NAME">
+        </div><BR>
+            <div class="title">
+                COMMENTS
+                <textarea name="r2"></textarea>
+            </div>
+         
+            <div class="input_box">
+                <input type="submit" name="s1">
+                {{result}}
+            </div><br>
+            
+        </form>
+    </div>
+   {% endblock content %}
+</body>
+</html>
+

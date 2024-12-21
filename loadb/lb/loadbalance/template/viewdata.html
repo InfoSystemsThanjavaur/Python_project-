@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/viewd.css">
+    <title>Document</title>
+</head>
+<body>
+{% block content %}
+<div class="container"> 
+    <h1>VIEW DATA</h1>
+    <form action="viewdata.html" method="post">
+        {% csrf_token %}
+    <label><b>USERID</b></label>
+    <input type="text" name="rec1"><br>
+    <input type="submit" name="c3" value="search">
+</form>
+<table border="2" align="center" bgcolor="cyan">
+    <tr><th colspan="7">DATA</th></tr>
+    <tr><th>USERID</th><th>NAME</th><TH>MOBILE</TH><TH>EMAIL</TH><TH>DATA</TH><TH>DATE</TH></tr>
+    {% for i in result %}
+    <tr>
+        {% for j in i %}
+        <td>{{j}}</td>
+   
+        {% endfor %}
+    </tr>
+        {% endfor %}
+     </table>
+</div>
+{% endblock content %}
+</body>
+</html>

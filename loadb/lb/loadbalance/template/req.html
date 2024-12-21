@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/cmt.css">
+    <title>REGISTER</title>
+</head>
+<body>
+   {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>REQUEST TO CLOUD</b></h1>
+        </div>
+        <form action="req.html" method="post">
+            {% csrf_token %}
+        <div class="input_box">
+            <span class="details">ENTERID</span>
+            <input type="text" name="r1" placeholder="ENTER ID">
+        </div><BR>
+        <div class="input_box">
+            <span class="details">CONTENT</span>
+            <input type="text" name="r2" placeholder="ENTER CONTENT">
+        </div><BR>
+            <div class="title">
+                REQUEST
+                <textarea name="r3"></textarea>
+            </div>
+         
+            <div class="input_box">
+                <input type="submit" name="s1">
+                {{result}}
+            </div><br>
+            
+        </form>
+    </div>
+   {% endblock content %}
+</body>
+</html>
+
