@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/resans.css">
+</head>
+<body bgcolor="darksalmon">
+    
+    <div class="container">
+        <h1>PROVIDE MATERIAL</h1>
+    <form action="resans.html" method="post">
+        {% csrf_token %}
+    <div class="title">LEARNERNAME<input type="text" name="S1"></div>
+    <div class="title">QUESTION<input type="text" name="S2"></div>
+    <div class="title">
+        ANSWER
+        <textarea name="S3"></textarea>
+    </div>
+    <input type="submit" name="s4"  value="upload">
+  
+    {% if result == 'yes' %}
+    <script>
+    alert('answer send!..')
+    </script>
+{% endif %}
+    </form>
+</div>
+</body>
+</html>

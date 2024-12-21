@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/pmet.css">
+</head>
+<body bgcolor="darksalmon">
+    
+    <div class="container">
+        <h1>PROVIDE MATERIAL</h1>
+    <form action="pmet.html" method="post">
+        {% csrf_token %}
+    <div class="title">MATERIAL NAME<input type="text" name="S1"></div>
+    <div class="title">
+        NOTE MATERIAL
+        <textarea name="S2"></textarea>
+    </div>
+    <input type="submit" name="s3"  value="upload">
+  
+    {% if result == 'yes' %}
+    <script>
+    alert('notes uploaded')
+    </script>
+{% endif %}
+    </form>
+</div>
+</body>
+</html>

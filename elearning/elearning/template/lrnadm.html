@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/lrnn.css">
+    <title>Document</title>
+</head>
+    
+    <body bgcolor="antiquewhite">     
+    {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>ADMISSION OF LEARNER</b></h1>
+        </div>
+        <form action="lrnadm.html" method="post">
+            {% csrf_token %}
+        
+            <div class="input_box">
+                <span class="details">LEARNER NAME</span>
+                <input type="text" name="p1" placeholder="LEARNER NAME">
+            </div>
+
+        <div class="input_box">
+            <span class="details">AGE</span>
+            <input type="text" name="p2" placeholder="AGE">
+        </div>
+        <div class="input_box">
+                <span class="details">GENDER</span>
+                <input type="text" name="p3" placeholder="GENDER">
+        </div>
+           
+       
+
+        <div class="input_box">
+            <span class="details">PASSWORD</span>
+                <input type="text" name="p4" placeholder="PASSWORD">
+        </div>
+
+        <div class="input_box">
+            <span class="details">NATIVE</span>
+                <input type="text" name="p5" placeholder="NATIVE">
+        </div>
+
+        
+        <div class="input_box">
+            <span class="details">DATE</span>
+                <input type="date" name="p6" placeholder="DATE">
+        </div>
+       
+        
+            <div class="input_box">
+                <input type="submit" name="s1">
+        {{result}}
+            </div><br>
+
+       
+        </form>
+    </div>
+    
+  
+    
+    {% endblock content %}
+</body>
+</html>
