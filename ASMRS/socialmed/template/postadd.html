@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style10.css">
+    <title>Document</title>
+</head>
+    
+    <body bgcolor="antiquewhite">
+    {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>POSTADD</b></h1>
+        </div>
+        <form action="postadd.html" method="post">
+            {% csrf_token %}
+        <div class="input_box">
+            <span class="details">POST TITLE</span>
+            <input type="text" name="p1" placeholder="POST TITLE">
+        </div>
+        <div class="input_box">
+                <span class="details">POST CATEGORY</span>
+                <input type="text" name="p2" placeholder="POST CATEGORY">
+        </div>
+           
+        <div class="input_box">
+           
+            <span class="details">POST DESCRIPTION</span>
+            <textarea name="p3"></textarea>
+        </div>
+
+        <div class="input_box">
+            <span class="details">DATE</span>
+                <input type="date" name="p4" placeholder="DATE">
+        </div>
+        
+       
+
+           
+
+            <div class="input_box">
+                <input type="submit" name="s1">
+        {{result}}
+            </div><br>
+
+       
+        </form>
+    </div>
+    
+  
+    
+    {% endblock content %}
+</body>
+</html>

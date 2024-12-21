@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style9.css">
+    <title>Document</title>
+</head>
+    
+    <body bgcolor="antiquewhite">
+    {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>NEWSFEED</b></h1>
+        </div>
+        <form action="news.html" method="post">
+            {% csrf_token %}
+       
+        <div class="input_box">
+                <span class="details">NEWSTITLE</span>
+                <input type="text" name="n1" placeholder="NEWSTITLE">
+        </div>
+        
+        <div class="input_box">
+            <span class="details">NEWS SUBJECT</span>
+                <input type="text" name="n2" placeholder="NEWS SUBJECT">
+        </div>
+           
+        <div class="input_box">
+           
+            <span class="details">NEWS CONTENT</span>
+            <textarea name="n3"></textarea>
+        </div>
+        <div class="input_box">
+                <input type="submit" name="s1">
+        {{result}}
+            </div><br>
+
+       
+        </form>
+    </div>
+    
+{% endblock content %}
+</body>
+</html>

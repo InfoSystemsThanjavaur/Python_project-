@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style8.css">
+    <title>Document</title>
+</head>
+<body bgcolor="bisque">
+{% block content %}
+    
+    <div class="container">
+        <h1>RECOMMENDATION</h1>
+        <form action="recomend.html" method="post">
+            {% csrf_token %}
+        <label><b>CATEGORY</b></label>
+        <input type="text" name="rec1"><br>
+        <input type="submit" name="c3" value="search">
+    </form>
+    <table border="2" align="center" bgcolor="cyan">
+        <tr><th colspan="5">RECOMMENDATION DETAILS</th></tr>
+        <tr><th>POSTID</th><th>POSTTITTLE</th><TH>POSTCATEGORY</TH><TH>POSTDESCRIPTION</TH><TH>DATE</TH></tr>
+        {% for i in result %}
+        <tr>
+            {% for j in i %}
+            <td>{{j}}</td>
+       
+            {% endfor %}
+        </tr>
+            {% endfor %}
+         </table>
+    </div>
+    {% endblock content %}
+</body>
+</html>

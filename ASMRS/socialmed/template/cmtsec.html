@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>commentsection</title>
+    <link rel="stylesheet" href="static/cmt1.css">
+</head>
+<body bgcolor="bisque">
+    {% block content %}
+   
+    <form action="cmtsec.html" method="post" >
+        {% csrf_token %}
+        <div class="container">
+            <h1>ENTER YOUR COMMENTS</h1>
+            POSTID<input type="text" name="cs1"><BR>
+            COMMENTS<TEXTarea name="cs2"></TEXTarea><br>
+            <input type="submit" name="sub"><br>
+            {{status1}}
+        </div>
+    </form>
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/view.css">
+    <title>Document</title>
+</head>
+<body bgcolor="bisque">
+{% block content %}
+    
+    <div class="container">
+        <h1>COMMENTS</h1>
+<form action="viewact.html" method="post">
+            {% csrf_token %}
+        <label><b>POSTID</b></label>
+        <input type="text" name="cmt1"><br>
+        <input type="submit" name="c4" value="search">
+
+    
+    
+    <table border="2" align="center" bgcolor="cyan">
+        <tr><th colspan="6">CATEGORY DETAILS</th></tr>
+        <tr><th>POSTID</th><th>POSTTITTLE</th><TH>POSTCATEGORY</TH><TH>POSTDESCRIPTION</TH><TH>DATE</TH><th>COMMENTS</th></tr>
+        {% for i in result %}
+        <tr>
+            {% for j in i %}
+            <td>{{j}}</td>
+       
+            {% endfor %}
+        </tr>
+            {% endfor %}
+         </table>
+    </div>
+
+  
+</form>
+{% endblock content %}
+</body>
+</html>

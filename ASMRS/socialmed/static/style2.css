@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.container{
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 150px;
+}
+.container .container_title{
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+.container form .input_box .details{
+    text-transform: uppercase;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    margin-right: 100px;
+    margin-bottom: 5px;
+}

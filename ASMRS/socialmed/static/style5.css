@@ -1,0 +1,14 @@
+.container{
+        margin-top: 200px;
+        text-align: center;
+}
+label{
+        color: blue;
+        text-size-adjust: 20%;
+}
+button{
+    color: blue;
+}
+body{
+    background-color: antiquewhite;
+}
