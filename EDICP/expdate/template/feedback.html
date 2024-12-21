@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>commentsection</title>
+    <link rel="stylesheet" href="static/cmt1.css">
+</head>
+<body bgcolor="bisque">
+    {% block content %}
+   
+    <form action="feedback.html" method="post" >
+        {% csrf_token %}
+        <div class="container">
+            <h1>ENTER YOUR FEEDBACK</h1>
+            NAME<input type="text" name="t1"><BR>
+            DEPT<input type="text" name="t2"><BR>
+            FEEDBACK<TEXTarea name="t3"></TEXTarea><br>
+            <input type="submit" name="sub"><br>
+            {{result}}        
+        </div>
+    </form>
+    {% endblock content %}
+</body>
+</html>

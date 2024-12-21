@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/hviews.css">
+    <title>Document</title>
+</head>
+<body>
+{% block content %}
+<div class="container">
+    <h1>hospital details</h1>
+    <form action="viewdt.html" method="post">
+        {% csrf_token %}
+    
+    <label><b>HOSPITAL NAME</b></label>
+    <input type="text" name="pro1"><br>
+    <label><b>DEPARTMENT</b></label>
+    <input type="text" name="pro2"><br>
+    <input type="submit" name="c4" value="search">
+</form>
+<table border="2" align="center" bgcolor="cyan">
+    <tr><th colspan="10">HOSPITAL DETAILS</th></tr>
+    <tr><th>HOSPITALID</th><TH>HOSPITAL NAME</TH><TH>DEPARTMENT</TH><TH>MEDICINE TYPE</TH><TH>MEDNAME</TH><TH>PRICE</TH><TH>QUANTITY</TH><TH>MANUFACTURED DATE</TH><TH>EXPIRY DATE</TH></tr>
+    {% for i in result %}
+    <tr>
+        {% for j in i %}
+        <td>{{j}}</td>
+   
+        {% endfor %}
+    </tr>
+        {% endfor %}
+     </table>
+</div>
+{% endblock content %}
+</body>
+</html>

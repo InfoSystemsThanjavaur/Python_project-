@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/cntus.css">
+    <title>Document</title>
+</head>
+    
+    <body bgcolor="antiquewhite">     
+    {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>HOSPITAL DETAILS</b></h1>
+        </div>
+        <form action="cntus.html" method="post">
+            {% csrf_token %}
+        
+            <div class="input_box">
+                <span class="details">HOSPITAL NAME</span>
+                <input type="text" name="p1" placeholder="HOSPITAL NAME">
+            </div>
+
+        <div class="input_box">
+            <span class="details">DEPARTMENT</span>
+            <input type="text" name="p2" placeholder="DEPARTMENT">
+        </div>
+        <div class="input_box">
+                <span class="details">MEDICINE TYPE</span>
+                <input type="text" name="p3" placeholder="MEDICINE TYPE">
+        </div>
+           
+       
+
+        <div class="input_box">
+            <span class="details">MEDICINE NAME</span>
+                <input type="text" name="p4" placeholder="MEDICINE NAME">
+        </div>
+
+        <div class="input_box">
+            <span class="details">PRICE</span>
+                <input type="text" name="p5" placeholder="PRICE">
+        </div>
+       
+        <div class="input_box">
+            <span class="details">QUANTITY</span>
+                <input type="text" name="p6" placeholder="QUANTITY">
+        </div>
+
+        <div class="input_box">
+            <span class="details">MANUFACTURED DATE</span>
+                <input type="date" name="p7" placeholder="MANDATE">
+        </div>  
+
+        <div class="input_box">
+            <span class="details">EXPIRY DATE</span>
+                <input type="date" name="p8" placeholder="EXPIRY DATE">
+        </div>  
+
+            <div class="input_box">
+                <input type="submit" name="s1">
+        {{result}}
+            </div><br>
+
+       
+        </form>
+    </div>
+    
+  
+    
+    {% endblock content %}
+</body>
+</html>

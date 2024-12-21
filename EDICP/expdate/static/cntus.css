@@ -1,0 +1,52 @@
+
+*{
+    margin: 0;
+    padding:0;
+}
+
+.container{
+    margin-top: 200px;
+    width: 50%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container .container_title{
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 100px;
+    width: 100%;
+    margin-left: 250px;
+}
+
+.container form .input_box {
+    display: block;
+    width: 25%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container form .input_box .details{
+    text-transform: uppercase;
+    text-align:left;
+    display: block;
+    margin-bottom: 10px;
+}
+.container form .input_box input{
+    border-radius: 5px;
+    width:150%;
+    height: 30px;
+    
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+.container form .input_box textarea{
+    width: 150%;
+    height: 100px;
+    margin-bottom: 30px;
+    
+    border-color: black;
+    resize: none;
+}

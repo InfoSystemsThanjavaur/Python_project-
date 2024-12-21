@@ -1,0 +1,25 @@
+<html>
+    <body bgcolor="cyan">
+{% block content %}
+<link rel="stylesheet" href="static/aviews.css">
+<form action="views.html" method="post">
+    {% csrf_token %}
+    <div class="one">
+    <input type="submit" value="view details">
+<table border="2" align="center" bgcolor="beige">
+    <tr><th colspan="10">HOSPITAL DETAILS</th></tr>
+    <tr><th>HOSPITALID</th><TH>HOSPITAL NAME</TH><TH>DEPARTMENT</TH><TH>MEDICINE TYPE</TH><TH>MEDNAME</TH><TH>PRICE</TH><TH>QUANTITY</TH><TH>MANUFACTURED DATE</TH><TH>EXPIRY DATE</TH></tr>
+    {% for i in result %}
+    <tr>
+        {% for j in i %}
+        <td>{{j}}</td>
+   
+        {% endfor %}
+    </tr>
+        {% endfor %}
+     </table>
+    </div>
+</form>
+{% endblock content %}
+    </body>
+</html>

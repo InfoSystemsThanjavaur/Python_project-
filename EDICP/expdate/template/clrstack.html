@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="static/clrstack.css">
+    {% block content %}
+    <div class="container">
+        <h1>CLEAR STACK</h1>
+    <form action="clrstack.html" method="post">
+        {% csrf_token %}
+        <label><b>HOSPITAL NAME</b></label>
+        <input type="text" name="c1"><br>
+
+        <input type="submit" name="c4" value="clear">
+    </form>
+    
+    {% if status == 'yess' %}
+    <script>
+    alert('STACK UPDATED')
+    </script>
+    {% endif %}
+    </div>
+    {% endblock content %}
+</body>
+</html>
