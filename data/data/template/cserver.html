@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/audm.css">
+    <title>Document</title>
+</head>
+    
+    <body bgcolor="antiquewhite">     
+    {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>AUDITTING DETAILS</b></h1>
+        </div>
+        <form action="cserver.html" method="post">
+            {% csrf_token %}
+        
+        
+
+        <div class="input_box">
+            <span class="details">IMAGES</span>
+            <input type="image" name="a2" placeholder="IMAGE">
+        </div>
+
+        <div class="input_box">
+            <div class="input_box">
+            <span class="details">IMAGE CATEGORY</span>
+                <input type="text" name="a4" placeholder="IMAGE CATEGORY">
+        </div>
+        <div class="input_box">
+            <div class="input_box">
+            <span class="details">NAME</span>
+                <input type="text" name="a4" placeholder="NAME">
+        </div>
+
+        <div class="input_box">
+            <div class="input_box">
+            <span class="details">COPIES</span>
+                <input type="text" name="a4" placeholder="COPIES">
+        </div>
+
+        <div class="input_box">
+            <div class="input_box">
+            <span class="details">IMAGE SIZE</span>
+                <input type="text" name="a4" placeholder="IMAGE SIZE">
+        </div>
+
+        <div class="input_box">
+            <div class="input_box">
+            <span class="details">IMAGE TYPE</span>
+                <input type="text" name="a4" placeholder="IMAGE TYPE">
+        </div>
+            <div class="input_box">
+                <input type="submit" name="s1">
+        {{result}}
+            </div><br>
+
+       
+        </form>
+    </div>
+    
+  
+    
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/downm.css">
+    <title>Document</title>
+</head>
+    
+    <body bgcolor="antiquewhite">     
+    {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>KEY GENERATION</b></h1>
+        </div>
+        <form action="keym.html" method="post">
+            {% csrf_token %}
+        
+            <div class="input_box">
+                <span class="details">USER NAME</span>
+                <input type="text" name="p1" placeholder="USER NAME">
+            </div>
+
+        <div class="input_box">
+            <span class="details">PASSWORD</span>
+            <input type="text" name="p2" placeholder="PASSWORD">
+        </div>
+        <div class="input_box">
+                <span class="details">RE-ENTRY PASSWORD</span>
+                <input type="text" name="p3" placeholder="RE-ENTRY PASSWORD">
+        </div>
+           
+       
+
+        <div class="input_box">
+            <span class="details">FULL NAME</span>
+                <input type="text" name="p4" placeholder="FULL NAME">
+        </div>
+
+        <div class="input_box">
+            <span class="details">EMAIL</span>
+                <input type="text" name="p5" placeholder="EMAIL">
+        </div>
+
+        <div class="input_box">
+            <span class="details">PHONE NUMBER</span>
+                <input type="text" name="p6" placeholder="PHONE NUMBER">
+        </div>
+
+            <div class="input_box">
+                <input type="submit" name="s1">
+        {{result}}
+            </div><br>
+
+       
+        </form>
+    </div>
+    
+  
+    
+    {% endblock content %}
+</body>
+</html>

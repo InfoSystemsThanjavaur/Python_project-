@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/downm.css">
+    <title>Document</title>
+</head>
+    
+    <body bgcolor="antiquewhite">     
+    {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>DATA OWNER</b></h1>
+        </div>
+        <form action="downm.html" method="post">
+            {% csrf_token %}
+        
+            <div class="input_box">
+                <span class="details">GRAPICAL ID</span>
+                <input type="text" name="p1" placeholder="GRAPHICAL ID">
+            </div>
+
+        <div class="input_box">
+            <span class="details">IMAGE NAME</span>
+            <input type="text" name="p2" placeholder="IMAGE NAME">
+        </div>
+        <div class="input_box">
+                <span class="details">AUTHOR CHECK</span>
+                <input type="text" name="p3" placeholder="AUTHOR CHECK">
+        </div>
+           
+       
+
+        <div class="input_box">
+            <span class="details">IMAGE TYPE</span>
+                <input type="text" name="p4" placeholder="IMAGE TYPE">
+        </div>
+
+        <div class="input_box">
+            <span class="details">IMAGE CHECK TYPE</span>
+                <input type="text" name="p5" placeholder="IMAGE CHECK TYPE">
+        </div>
+
+            <div class="input_box">
+                <input type="submit" name="s1">
+        {{result}}
+            </div><br>
+
+       
+        </form>
+    </div>
+    
+  
+    
+    {% endblock content %}
+</body>
+</html>
