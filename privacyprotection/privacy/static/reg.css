@@ -1,0 +1,35 @@
+
+button{
+    background-color:darkseagreen;
+    padding: 15px 50px;
+
+    margin-left: 100px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    font-family: sans-serif;
+
+}
+.one:hover{
+    background-color: yellow;
+    box-shadow: 0px 0px 35px yellow;
+   }
+.two:hover{
+    background-color: yellow;
+    box-shadow: 0px 0px 35px yellow;
+   }
+.three:hover{
+    background-color: yellow;
+    box-shadow: 0px 0px 35px yellow;
+   }
+
+   H1{
+    margin-top: 200px;
+    text-align: center;
+    color:red;
+    font-family: serif;
+    
+   
+    
+
+   }

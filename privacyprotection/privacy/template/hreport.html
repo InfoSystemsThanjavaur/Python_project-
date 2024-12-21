@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/hreport.css">
+    <title>REGISTER</title>
+</head>
+<body bgcolor="wheat">
+   {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>HEALTH REPORT</b></h1>
+        </div>
+        <form action="hreport.html" method="post">
+            {% csrf_token %}
+        <div class="input_box">
+            <span class="details"> PATIENT NAME</span>
+            <input type="text" name="r1" placeholder="ENTER NAME">
+        </div><BR>
+
+        <div class="input_box">
+            <span class="details">DEPTARTMENT</span>
+            <input type="text" name="r2" placeholder="DEPTARTMENT">
+        </div><BR>
+        <div class="input_box">
+            <span class="details">AGE</span>
+                <input type="text" name="r3" placeholder="AGE">
+        </div><BR>
+           
+          
+
+            <div class="input_box">
+                <span class="details1">GENDER</span>
+                    <input type="radio" name="r4" value="male">MALE
+                    <input type="radio" name="r4" value="female">FEMALE 
+            </div><BR>
+
+            <div class="input_box">
+                <span class="details">HEIGHT</span>
+                    <input type="text" name="r5" placeholder="HEIGHT">
+            </div><BR>
+
+            
+            
+                <div class="input_box">
+                    <span class="details">WEIGHT</span>
+                    <input type="text" name="r6" placeholder="WEIGHT">
+                </div><BR>   
+
+            <div class="input_box">
+                <span class="details">BLOOD PRESSURE</span>
+                <input type="text" name="r7" placeholder="BP">
+            </div><BR>
+
+                <div class="input_box">
+                    <span class="details">SUGAR</span>
+                    <input type="text" name="r8" placeholder="SUGAR">
+                </div><BR>
+                
+                    <div class="input_box">
+                        <span class="details">REPORT</span>
+                        <textarea name="r9"></textarea>
+                    </div>
+
+            <div class="input_box">
+                <input type="submit" name="s1">
+                {{result}}
+            </div><br>
+            
+        </form>
+        
+    </div>
+   {% endblock content %}
+</body>
+</html>

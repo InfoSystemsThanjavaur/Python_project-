@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/sndap.css">
+    <title>Document</title>
+</head>
+    
+    <body bgcolor="antiquewhite">     
+    {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>SEND APPOINMENT</b></h1>
+        </div>
+        <form action="sndap.html" method="post">
+            {% csrf_token %}
+        
+            <div class="input_box">
+                <span class="details">PATIENT NAME</span>
+                <input type="text" name="p1" placeholder="PATIENT NAME">
+            </div>
+
+        <div class="input_box">
+            <span class="details">DEPARTMENT</span>
+            <input type="text" name="p2" placeholder="DEPARTMENT">
+        </div>
+        <div class="input_box">
+                <span class="details">AGE</span>
+                <input type="text" name="p3" placeholder="AGE">
+        </div>
+           
+       
+
+        <div class="input_box">
+            <span class="details">GENDER</span>
+                <input type="text" name="p4" placeholder="GENDER">
+        </div>
+
+        <div class="input_box">
+            <span class="details">STATUS</span>
+                <input type="text" name="p5" placeholder="STATUS">
+        </div>
+       
+        <div class="input_box">
+            <span class="details">DATE&TIME</span>
+                <input type="datetime" name="p6" placeholder="date&time">
+        </div>
+
+        
+            <div class="input_box">
+                <input type="submit" name="s1">
+        {{result}}
+            </div><br>
+
+       
+        </form>
+    </div>
+    
+  
+    
+    {% endblock content %}
+</body>
+</html>

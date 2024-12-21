@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/intrud.css">
+    <title>Document</title>
+</head>
+<body>
+{% block content %}
+<div class="container">
+    <h1>PATIENT INFORMATION</h1>
+    <form action="intruder.html" method="post">
+        {% csrf_token %}
+    <label><b>NAME</b></label>
+    <input type="text" name="rec1"><br>
+    <input type="submit" name="c3" value="search">
+</form>
+<table border="2" align="center" bgcolor="cyan">
+    <tr><th colspan="9">PATIENT INFORMATION</th></tr>
+    <tr><th>PATIENT ID</th><th>NAME</th><TH>AGE</TH><TH>MOBILE</TH><TH>EMAIL</TH><TH>PASSWORD</TH><TH>GENDER</TH><th>DEPT</th><TH>DATE</TH></tr>
+    {% for i in result %}
+    <tr>
+        {% for j in i %}
+        <td>{{j}}</td>
+   
+        {% endfor %}
+    </tr>
+        {% endfor %}
+     </table>
+     <a href="change.html"><button>CHANGE DATA</button></a>
+</div>
+{% endblock content %}
+</body>
+</html>

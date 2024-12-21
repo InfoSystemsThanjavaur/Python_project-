@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="static/logout.css">
+    {% block content %}
+    <div class="container">
+        <h1>LOGOUT PAGE!.</h1>
+        <form action="logoutp.html" method="post">
+            {% csrf_token %}
+        <label><b>NAME</b></label>
+        <input type="text" name="c1"><br>
+
+        <label><b>EMAIL</b></label>
+        <input type="text" name="c2"><br>
+
+        <input type="submit" name="c3" value="clear">
+    </form>
+    {{status}}
+    {% if status == 'yes' %}
+    <script>
+    alert('LOGOUT SUCCESSFULLY!.')
+    </script>
+{% endif %}
+    </div>
+    {% endblock content %}
+</body>
+</html>

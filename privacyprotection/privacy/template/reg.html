@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/preg.css">
+    <title>REGISTER</title>
+</head>
+<body bgcolor="white">
+   {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>REGISTER</b></h1>
+        </div>
+        <form action="reg.html" method="post">
+            {% csrf_token %}
+        <div class="input_box">
+            <span class="details"> PATIENT NAME</span>
+            <input type="text" name="r1" placeholder="ENTER NAME">
+        </div><BR>
+
+        <div class="input_box">
+            <span class="details">AGE</span>
+            <input type="text" name="r2" placeholder="AGE">
+        </div><BR>
+        <div class="input_box">
+            <span class="details">MOBILE</span>
+                <input type="text" name="r3" placeholder="MOBILE">
+        </div><BR>
+           
+          
+
+        <div class="input_box">
+           
+            <span class="details">EMAIL</span>
+            <input type="text" name="r4" placeholder="EMAIL">
+        </div><BR>
+
+            <div class="input_box">
+                <span class="details">PASSWORD</span>
+                    <input type="text" name="r5" placeholder="PASSWORD">
+            </div><BR>
+
+            <div class="one">
+                
+                    GENDER<input type="radio" name="r6" value="male">MALE
+                    <input type="radio" name="r6" value="female">FEMALE 
+            </div><BR>
+            
+                <div class="input_box">
+                    <span class="details">DEPT</span>
+                    <input type="text" name="r7" placeholder="DEPT">
+                </div><BR>   
+
+            <div class="input_box">
+                <span class="details">DATE</span>
+                <input type="date" name="r8" placeholder="PASSWORD">
+            </div><BR>
+
+            <div class="input_box">
+                <input type="submit" name="s1">
+                {{result}}
+            </div><br>
+            
+        </form>
+    </div>
+   {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/prq.css">
+    <title>Document</title>
+</head>
+<body bgcolor="cadetblue">
+    {% block content %}
+    <form action="prq.html" method="post">
+        {% csrf_token %}
+        <div class="container">
+            <H1>UPDATE PATIENT STATUS</H1>
+           
+            PATIENT NAME<input type="text" name="pr1"><br>
+            DEPT<input type="text" name="pr2"><br>
+            <input type="submit" name="sub" value="UPDATE">
+            {{status1}}
+        </div>
+    </form>
+    {% endblock content %}
+</body>
+</html>
