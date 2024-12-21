@@ -1,0 +1,21 @@
+H1{
+    text-align: center;
+}
+
+button{
+    background-color:rosybrown;
+    padding: 15px 35px;
+   
+    margin-left: 200px;
+    margin-right: 190px;
+    cursor: pointer;
+    border: none;
+    font-family: sans-serif;
+    color: royalblue;
+    border-style: solid;
+
+}
+.one:hover{
+    background-color: yellow;
+    box-shadow: 0px 0px 35px yellow;
+   }

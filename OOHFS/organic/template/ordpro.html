@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/ordpro.css">
+    <title>ORDER FOOD</title>
+</head>
+<body bgcolor="wheat">
+   {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>FOOD ORDER</b></h1>
+        </div>
+        <form action="ordpro.html" method="post">
+            {% csrf_token %}
+        <div class="input_box">
+            <span class="details">USER NAME</span>
+            <input type="text" name="r1" placeholder="ENTER NAME">
+        </div><BR>
+
+        <div class="input_box">
+            <span class="details">MOBILE</span>
+            <input type="text" name="r2" placeholder="MOBILE">
+        </div><BR>
+        <div class="input_box">
+            <span class="details">PASSWORD</span>
+                <input type="text" name="r3" placeholder="PASSWORD">
+        </div><BR>
+           
+          
+
+            <div class="input_box">
+                <span class="details1">GENDER</span>
+                    <input type="radio" name="r4" value="male">MALE
+                    <input type="radio" name="r4" value="female">FEMALE 
+            </div><BR>
+
+           
+                <div class="input_box">
+                    <span class="details">DATE</span>
+                    <input type="date" name="r5" placeholder="DATE">
+                </div><BR>
+                
+                    <div class="input_box">
+                        <span class="details">ADDRESS</span>
+                        <textarea name="r6"></textarea>
+                    </div>
+                
+                    <div class="input_box">
+                        <span class="details">ENTER OREDER</span>
+                        <textarea name="r7"></textarea>
+                    </div>
+
+            <div class="input_box">
+                <input type="submit" name="s1">
+                {{result}}
+            </div><br>
+            
+        </form>
+        
+    </div>
+   {% endblock content %}
+</body>
+</html>

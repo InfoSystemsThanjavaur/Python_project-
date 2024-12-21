@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <link rel="stylesheet" href="static/viewreq.css">
+    {% block content %}
+    <div class="container">
+        <h1>UPDATE ORDER</h1>
+    <form action="viewreq.html" method="post">
+        {% csrf_token %}
+        <label><b>CONSUMER NAME</b></label>
+        <input type="text" name="c1"><br>
+
+        <input type="submit" name="c4" value="CONFIRMED">
+    </form>
+    
+    {% if status1 == 'yess' %}
+    <script>
+    alert('ORDER CONFIRMED')
+    </script>
+    {% endif %}
+    </div>
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/addp.css">
+    <title>Document</title>
+</head>
+    
+    <body bgcolor="antiquewhite">     
+    {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>FOOD DETAILS</b></h1>
+        </div>
+        <form action="addp.html" method="post">
+            {% csrf_token %}
+        
+            <div class="input_box">
+                <span class="details">FOOD TYPE</span>
+                <input type="text" name="p1" placeholder="FOOD TYPE">
+            </div>
+
+        <div class="input_box">
+            <span class="details">FOOD NAME</span>
+            <input type="text" name="p2" placeholder="FOODNAME">
+        </div>
+        <div class="input_box">
+                <span class="details">PRICE</span>
+                <input type="text" name="p3" placeholder="PRICE">
+        </div>
+           
+       
+
+        <div class="input_box">
+            <span class="details">QUANTITY</span>
+                <input type="text" name="p4" placeholder="QUANTITY">
+        </div>
+
+        <div class="input_box">
+            <span class="details">MANUFACTURED DATE</span>
+                <input type="date" name="p5" placeholder="MANUFACTURED DATE">
+        </div>
+       
+        <div class="input_box">
+            <span class="details">EXPIRY DATE</span>
+                <input type="date" name="p6" placeholder="QUANTITY">
+        </div>
+
+
+            <div class="input_box">
+                <input type="submit" name="s1">
+        {{result}}
+            </div><br>
+
+       
+        </form>
+    </div>
+    
+  
+    
+    {% endblock content %}
+</body>
+</html>

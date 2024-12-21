@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/viewsselpr.css">
+    <title>Document</title>
+</head>
+<body>
+{% block content %}
+<div class="container">
+    <h1>SELLER PRODUCTS INFORMATION</h1>
+    <form action="viewsselpr.html" method="post">
+        {% csrf_token %}
+    <label><b>VIEW THE DETAILS</b></label>
+   
+    <input type="submit" name="c3" value="search">
+</form>
+<table border="2" align="center" bgcolor="cyan">
+    <tr><th colspan="10">DETAILS</th></tr>
+    <tr><th>FOOD TYPE</th><th>FOOD NAME</th><TH>PRICE</TH><TH>QUANTITY</TH><TH>MANFACTDATE</TH><TH>EXPIRY DATE</TH></tr>
+    {% for i in result %}
+    <tr>
+        {% for j in i %}
+        <td>{{j}}</td>
+   
+        {% endfor %}
+    </tr>
+        {% endfor %}
+     </table>
+     <a href="vieword.html"><button><b>VIEW ORDER</b></button></a>
+     <a href="viewreq.html"><button><b>CONFIRM ORDER</b></button></a>
+</div>
+{% endblock content %}
+</body>
+</html>
