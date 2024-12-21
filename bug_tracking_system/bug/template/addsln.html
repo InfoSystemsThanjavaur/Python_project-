@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/addsln.css">
+    <title>Document</title>
+</head>
+<body bgcolor="cadetblue">
+    {% block content %}
+    <form action="addsln.html" method="post">
+        {% csrf_token %}
+        <div class="container">
+            <H1>ADD SOLUTION
+            </H1>
+           
+            BUG ID<input type="number" name="r1"><br>
+            <div class="title">
+                SOLUTION
+                 <textarea name="r2"></textarea>
+             </div>
+             <div class="title">
+                SOLUTION DESCRIPTION
+
+                 <textarea name="r3"></textarea>
+             </div>
+            {{status1}}
+            <input type="submit" name="s1" value="add">
+        </div>
+    </form>
+    {% endblock content %}
+</body>
+</html>

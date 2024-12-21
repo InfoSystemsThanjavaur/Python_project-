@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/asbug.css">
+    <title>COMMENTS</title>
+</head>
+<body>
+   {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>ASSIGN DEVELOPER</b></h1>
+        </div>
+        <form action="asgdev.html" method="post">
+            {% csrf_token %}
+        <div class="input_box">
+            <span class="details">BUGID</span>
+            <input type="text" name="r1" placeholder="BUGID">
+        </div><BR>
+            
+            <div class="title">
+               PROBLEM
+                <textarea name="r2"></textarea>
+            </div>
+
+            <div class="input_box">
+                <span class="details">DEVELOPER ID</span>
+                <input type="text" name="r3" placeholder="DEVELOPER ID">
+            </div><BR>
+            <div class="input_box">
+                <span class="details">DATE</span>
+                <input type="date" name="r4" placeholder="DATE OF SUBMISSION">
+            </div><BR>
+         
+            <div class="input_box">
+                <input type="submit" name="s1">
+                {{result}}
+            </div><br>
+            
+        </form>
+    </div>
+   {% endblock content %}
+</body>
+</html>

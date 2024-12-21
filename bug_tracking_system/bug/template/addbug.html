@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/asbug.css">
+    <title>COMMENTS</title>
+</head>
+<body>
+   {% block content %}
+   
+    <div class="container">
+        <div class="container_title">
+            <h1><b>ASSIGNBUG</b></h1>
+        </div>
+        <form action="addbug.html" method="post">
+            {% csrf_token %}
+        <div class="input_box">
+            <span class="details">USER NAME</span>
+            <input type="text" name="r1" placeholder="ENTER NAME">
+        </div><BR>
+            
+            <div class="title">
+               BUG DETAILS
+                <textarea name="r2"></textarea>
+            </div>
+            <div class="input_box">
+                <span class="details">DATE</span>
+                <input type="date" name="r3" placeholder="DATE OF SUBMISSION">
+            </div><BR>
+         
+            <div class="input_box">
+                <input type="submit" name="s1">
+                {{result}}
+            </div><br>
+            
+        </form>
+    </div>
+   {% endblock content %}
+</body>
+</html>

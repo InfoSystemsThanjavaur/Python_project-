@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/upro.css">
+    <title>Document</title>
+</head>
+<body>
+{% block content %}
+<div class="container"> 
+    <h1>USER PROFILE</h1>
+    <form action="viewslnus.html" method="post">
+        {% csrf_token %}
+    <label><b>BUG ID</b></label>
+    <input type="text" name="rec1"><br>
+    <input type="submit" name="c3" value="search">
+</form>
+<table border="2" align="center" bgcolor="cyan">
+    <tr><th colspan="10">DETAILS</th></tr>
+    <tr><th>BUG ID</th><th>SOLUTION</th><TH>PROJECT DESCRIPTION</TH><TH>SOLUTION DESCRIPTION</TH><TH>DATE</TH></tr>
+    {% for i in result %}
+    <tr>
+        {% for j in i %}
+        <td>{{j}}</td>
+   
+        {% endfor %}
+    </tr>
+        {% endfor %}
+     </table>
+</div>
+{% endblock content %}
+</body>
+</html>

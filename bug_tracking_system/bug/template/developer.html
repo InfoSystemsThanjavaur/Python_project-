@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/user.css">
+    <title>Document</title>
+    
+</head>
+<body bgcolor="lemonchiffon">
+        {% block content %}
+    <div class="container">
+
+        <div class="container_title">
+            Login
+        </div>
+
+        <form action="developer.html" method="post">
+            {% csrf_token %}
+            <div class="input_box">
+                <span class="details">user name</span>
+                <input type="text" name="a1">
+            </div>
+            <div class="input_box">
+                <span class="details">Password </span>
+                <input type="password" name="a2">
+            </div>
+
+            <div class="input_box">
+                <div class="button">
+                <input type="submit" name="s1" value="Login"> 
+                </div>
+            </div>
+        </form>
+    </div>
+
+    {% if result == 'failure' %}
+    <script>
+    alert('{{result}}')
+    </script>
+{% endif %}
+    {% endblock content %}
+
+</body>
+</html>
